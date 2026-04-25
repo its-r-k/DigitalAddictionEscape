@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Digital Addiction: The Rogue-lite Escape</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="scanline"></div>
+  <div id="app">
+
+    <!-- TITLE SCREEN -->
+    <div id="screen-title" class="screen active">
+      <div class="title-glitch-wrapper">
+        <h1 class="title-glitch" data-text="DIGITAL ADDICTION">DIGITAL ADDICTION</h1>
+        <p class="title-sub">THE ROGUE-LITE ESCAPE</p>
+      </div>
+      <div class="title-lore">
+        <p>The Labyrinth is alive.<br>Your attention is the currency.<br>Escape before your mind collapses.</p>
+      </div>
+      <button class="btn-primary" id="btn-start">ENTER THE LABYRINTH</button>
+      <p class="version-tag">v1.0.0 // COGNITIVE BUILD</p>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="screen-game" class="screen">
+      <!-- HUD -->
+      <div id="hud">
+        <div id="hud-stage">
+          <span class="hud-label">STAGE</span>
+          <span id="hud-stage-val">1 / 4</span>
+        </div>
+        <div id="hud-cl">
+          <span class="hud-label">COGNITIVE LOAD</span>
+          <div id="cl-bar-track">
+            <div id="cl-bar-fill"></div>
+            <span id="cl-bar-text">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENEMY BANNER -->
+      <div id="enemy-banner">
+        <span class="enemy-label">ENEMY ENCOUNTERED</span>
+        <h2 id="enemy-name"></h2>
+      </div>
+
+      <!-- STORY PANEL -->
+      <div id="story-panel">
+        <p id="story-text"></p>
+      </div>
+
+      <!-- OBSTACLE -->
+      <div id="obstacle-panel">
+        <span class="obstacle-label">⚠ OBSTACLE</span>
+        <p id="obstacle-text"></p>
+      </div>
+
+      <!-- CHOICES -->
+      <div id="choices-panel">
+        <p class="choices-prompt">SELECT YOUR IMPLEMENTATION INTENTION:</p>
+        <div id="choices-list"></div>
+      </div>
+
+      <!-- FEEDBACK -->
+      <div id="feedback-panel" class="hidden">
+        <p id="feedback-text"></p>
+        <button class="btn-secondary" id="btn-continue">CONTINUE →</button>
+      </div>
+    </div>
+
+    <!-- GAME OVER SCREEN -->
+    <div id="screen-gameover" class="screen">
+      <div class="end-icon">💀</div>
+      <h2 class="end-title">COGNITIVE COLLAPSE</h2>
+      <p class="end-body">Your Cognitive Load reached 100%.<br>The Labyrinth has consumed you.<br>The system wins — this time.</p>
+      <button class="btn-primary" id="btn-restart-go">TRY AGAIN</button>
+    </div>
+
+    <!-- WIN SCREEN -->
+    <div id="screen-win" class="screen">
+      <div class="end-icon win-icon">☀</div>
+      <h2 class="end-title win-title">ESCAPED</h2>
+      <p class="end-body">The server rack powers down. The neon lights fade into natural sunlight. Your mind is quiet.<br><br><strong>You have escaped.</strong></p>
+      <button class="btn-primary" id="btn-restart-win">PLAY AGAIN</button>
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
